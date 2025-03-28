@@ -20,3 +20,4 @@ COPY --chmod=755 entrypoint.sh ./
 ENTRYPOINT ["/bin/sh"]
 
 CMD ["entrypoint.sh"]
+
