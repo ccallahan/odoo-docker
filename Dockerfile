@@ -11,6 +11,8 @@ USER 0
 RUN apt-get -y update && apt-get install -y --no-install-recommends locales netcat-openbsd \
     && locale-gen ${LOCALE}
 
+RUN pip install squareup==8.1.0.20210121
+
 WORKDIR /app
 
 COPY --chmod=755 entrypoint.sh ./
