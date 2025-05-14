@@ -8,10 +8,10 @@ ENV LANG=${LOCALE}
 
 USER 0
 
-RUN apt-get -y update && apt-get install -y --no-install-recommends locales netcat-openbsd \
+RUN apt-get -y update && apt-get install -y --no-install-recommends locales netcat-openbsd xmlsec1 \
     && locale-gen ${LOCALE}
 
-RUN pip install squareup==8.1.0.20210121
+RUN pip install squareup pysaml2
 
 WORKDIR /app
 
